@@ -1,0 +1,38 @@
+.breadcrumbs {
+  font-size: .875rem;
+  line-height: 1.25rem;
+  max-width: 100%;
+  overflow-x: auto;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.breadcrumbs > ul {
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  min-height: -webkit-min-content;
+  min-height: -moz-min-content;
+  min-height: min-content;
+}
+
+.breadcrumbs > ul > li {
+  display: flex;
+  align-items: center;
+}
+
+.breadcrumbs > ul > li::before {
+  content: '';
+  margin-left: 0.5rem;
+  margin-right: 0.75rem;
+  display: block;
+  height: 0.375rem;
+  width: 0.375rem;
+  border-top: 1px solid;
+  border-right: 1px solid;
+  transform: rotate(45deg)
+}
+
+.breadcrumbs > ul > li:first-child:before {
+  display: none;
+}

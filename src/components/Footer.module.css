@@ -1,0 +1,33 @@
+.footer {
+  margin-top: 1rem;
+  display: grid;
+  row-gap: 2.5rem;
+  padding: 2.5rem;
+  background-color: var(--footer-color);
+  text-align: center;
+  width: 100%;
+  font-size: .875rem;
+  line-height: 1.25rem;
+}
+
+.footer > ul {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.sns {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.sns > a > svg {
+  fill: var(--c1);
+}
+
+@media (min-width: 48rem) {
+  .footer {
+    grid-auto-flow: row dense;
+  }
+}

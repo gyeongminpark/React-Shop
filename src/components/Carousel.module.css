@@ -1,0 +1,42 @@
+.container {
+  width: 100%;
+}
+
+.slide {
+  max-height: 700px;
+}
+
+.slide > img {
+  filter: brightness(75%);
+}
+
+.caption {
+  text-align: left;
+  color: #fff;
+  position: absolute;
+  left: 20px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.title {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 40px;
+}
+
+.desc {
+  margin-top: 5px;
+  line-height: 24px;
+}
+
+.button {
+  background-color: rgb(25, 29, 36);
+  border: 1px solid rgb(25, 29, 36);
+  margin-top: 20px;
+  padding: 7px 20px;
+  border-radius: 8px;
+  color: rgb(166, 173, 186);
+  font-size: 14px;
+  cursor: pointer;
+}

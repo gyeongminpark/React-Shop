@@ -1,0 +1,299 @@
+.header {
+  background-color: var(--header-bg);
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  top: 0;
+  display: flex;
+  align-items: center;
+  min-height: 4rem;
+}
+
+.inner {
+  width: 100%;
+  min-width: 300px;
+  display: flex;
+  align-items: center;
+}
+
+.menuArea {
+  flex: none;
+  width: 2.5rem;
+}
+
+.menuIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+  display: inline-block;
+  color: rgb(--menu-color);
+}
+
+.logo {
+  display: flex;
+  flex: 1 1 0%;
+  flex-shrink: 0;
+  margin-left: 0.25rem;
+  margin-right: 0.25rem;
+  border-radius: 0.5rem 0.5rem;
+  font-weight: 700;
+}
+
+.nav {
+  flex: none;
+  display: none;
+  margin-left: 0.5rem;
+}
+
+.link {
+  height: 2rem;
+  padding-left: 0.75rem;
+  padding-right: 0.75rem;
+  min-height: 2rem;
+  font-size: .875rem;
+  border-width: 1px;
+  background-color: transparent;
+  background-color: transparent;
+  display: inline-flex;
+  flex-shrink: 0;
+  cursor: pointer;
+  user-select: none;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1em;
+  font-weight: 600;
+}
+
+.link:hover {
+  border-radius: 0.5rem;
+  background-color: rgba(166, 173, 186, 0.2);
+}
+
+.flexContainer {
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  display: flex;
+  align-items: center;
+  height: 50px;
+}
+
+.swap {
+  margin-right: 0.5rem;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.swap > input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+.swapLight, .swapDark {
+  width: 1.75rem;
+  height: 1.75rem;
+  vertical-align: middle;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.searchButton {
+  padding-left: 0;
+  padding-right: 0;
+  width: 2.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 0;
+  margin-right: 0;
+  color: inherit;
+  background-color: transparent;
+  border: none;
+}
+
+.searchIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.searchInput {
+  opacity: 0;
+  border-radius: 0;
+  width: 100%;
+  z-index: -10;
+  top: 4rem;
+  left: 0px;
+  position: fixed;
+  background-color: var(--search-bg);
+  box-shadow: none;
+  height: 3rem;
+	padding-left: 1rem;
+	padding-right: 1rem;
+	font-size: .875rem;
+	line-height: 1.25rem;
+	outline: none;
+	border: none; 
+}
+
+.searchInput.show {
+  opacity: 1;
+}
+
+.filteredList {
+  background-color: rgb(75, 85, 99);
+  position: absolute;
+  top: 3rem;
+  display: block;
+  max-height: 18rem;
+  overflow-y: auto;
+}
+
+@media (max-width: 480px) {
+  .filteredList {
+    position: fixed;
+    top: 7rem;
+    left: 0;
+  }
+}
+
+.filteredList > li {
+  display: block;
+  padding: 0.7rem;
+  border-top: 1px solid #fff;
+}
+
+.cartArea {
+  width: 2.5rem;
+  margin-left: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartArea > span {
+  position: relative;
+}
+
+.cartIcon {
+  width: 1.5rem;
+  height: 1.5rem;
+}
+
+.total {
+  position: absolute;
+  top: -9px;
+  left: 15px;
+  border-radius: 50%;
+  background-color: red;
+  width: 20px;
+  height: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 13px;
+}
+
+
+
+@media (min-width: 480px) {
+  .menuArea {
+    width: auto;
+  }
+  
+  .logo {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .swap {
+    margin-right: 1rem;
+  }
+
+  .searchButton {
+    padding-left: 0.5rem;
+    padding-right: 0.5rem;
+    width: auto;
+    display: none;
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
+
+  .searchInput {
+    opacity: 1;
+    border-radius: 0.25rem;
+    transform: none;
+    display: inline-block;
+    position: static;
+  }
+
+  .cartArea {
+    width: 3rem;
+  }
+}
+
+@media (min-width: 480px) and (min-width: 1280px) {
+  .inner {
+    max-width: 480px;
+  }
+}
+
+@media (min-width: 768px) {
+  .logo {
+    flex: none;
+  }
+
+  .nav {
+    flex: 1 1 0%;
+    display: flex;
+  }
+}
+
+@media (min-width: 768px) and (min-width: 1280px) {
+  .inner {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1025px) {
+  .menuArea {
+    display: none;
+  }
+}
+
+
+@media (min-width: 1025px) and (min-width: 1280px) {
+  .inner {
+    max-width: 1025px;
+  }
+}
+
+@media (min-width: 1280px) {
+  .inner {
+    margin: auto;
+    width: 100%;
+    max-width: 1280px;
+  }
+}
+
+@media (min-width: 1280px) and (min-width: 1360px){
+  .inner {
+    max-width: 1360px;
+  }
+}
+
+
+
+
+
+
+
+
+
+
